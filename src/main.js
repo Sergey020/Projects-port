@@ -1,13 +1,18 @@
+// core version + navigation, pagination modules:
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+// import Swiper and modules styles
 import 'swiper/css';
+import 'swiper/css/navigation';
 
-const nextEl = document.querySelector(swiper-button-next);
-
-
+// init Swiper:
 const swiper = new Swiper('.swiper', {
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    direction: 'vertikal',
+  // configure Swiper to use modules
+  modules: [Navigation],
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
